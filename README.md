@@ -15,9 +15,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/license/yourusername/hypr-monitor-tui?style=flat-square" alt="License">
-  <img src="https://img.shields.io/github/v/release/yourusername/hypr-monitor-tui?style=flat-square" alt="Release">
-  <img src="https://img.shields.io/github/actions/workflow/status/yourusername/hypr-monitor-tui/ci.yml?style=flat-square" alt="Build Status">
+  <img src="https://img.shields.io/badge/license-GPL--3.0-blue?style=flat-square" alt="License: GPL-3.0">
   <img src="https://img.shields.io/badge/hyprland-compatible-blue?style=flat-square" alt="Hyprland Compatible">
 </p>
 
@@ -40,7 +38,7 @@
 ### Build from Source
 
 ```bash
-git clone https://github.com/yourusername/hypr-monitor-tui.git
+git clone https://github.com/Ninso112/hypr-monitor-tui.git
 cd hypr-monitor-tui
 cargo build --release
 ```
