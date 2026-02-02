@@ -1,0 +1,51 @@
+[package]
+name = "hypr-monitor-tui"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "A TUI application for configuring monitors in Hyprland"
+readme = "README.md"
+homepage = "https://github.com/yourusername/hypr-monitor-tui"
+repository = "https://github.com/yourusername/hypr-monitor-tui"
+license = "GPL-3.0"
+keywords = ["hyprland", "wayland", "monitor", "tui", "configuration"]
+categories = ["command-line-utilities", "config"]
+exclude = [
+    ".github/*",
+    "assets/screenshots/*",
+    "tests/*",
+]
+
+[dependencies]
+ratatui = "0.28"
+crossterm = "0.28"
+tokio = { version = "1", features = ["full", "sync"] }
+hyprland = "0.3"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+anyhow = "1"
+thiserror = "1"
+clap = { version = "4", features = ["derive", "env"] }
+dirs = "5"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+chrono = { version = "0.4", features = ["serde"] }
+
+[dev-dependencies]
+pretty_assertions = "1"
+tempfile = "3"
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[lib]
+name = "hypr_monitor_tui"
+path = "src/lib.rs"
+
+[[bin]]
+name = "hypr-monitor-tui"
+path = "src/main.rs"

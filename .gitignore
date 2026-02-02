@@ -1,0 +1,15 @@
+/target
+**/*.rs.bk
+*.log
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
